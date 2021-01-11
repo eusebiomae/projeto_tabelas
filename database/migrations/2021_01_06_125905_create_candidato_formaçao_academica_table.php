@@ -15,13 +15,14 @@ class CreateCandidatoExperienciaTipoEmpregoTable extends Migration
     {
         Schema::create('candidato_formaçao_academica', function (Blueprint $table) {
             $table->id();
-            $table->string('instituiçao ensino', 100);
+            $table->string('instituiçao_ensino', 100);
             $table->string('formaçao', 100);
-            $table->string('area de estudo', 100);
-            $table->date('ano inicio', 100);
-            $table->date('ano termino', 100)->nullable();
+            $table->string('area_estudo', 100);
+            $table->date('ano_inicio', 100);
+            $table->date('ano_termino', 100)->nullable();
             $table->text('desc', 250);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

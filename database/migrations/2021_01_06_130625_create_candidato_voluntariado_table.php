@@ -18,10 +18,11 @@ class CreateCandidatoVoluntariadoTable extends Migration
             $table->string('organizaçao', 150)->nullable();
             $table->string('funçao', 150)->nullable();
             $table->string('causa', 150)->nullable();
-            $table->date('data inicio', 150);
-            $table->date('data termino', 150)->nullable();
+            $table->date('data_inicio', 150);
+            $table->date('data_termino', 150)->nullable();
             $table->text('desc', 250)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

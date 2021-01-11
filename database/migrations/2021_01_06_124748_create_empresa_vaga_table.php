@@ -18,7 +18,7 @@ class CreateEmpresaVagaTable extends Migration
             $table->text('desc', 450)->nullable();
             $table->string('job_type', 250)->nullable();
             $table->string('area', 450)->nullable();
-            $table->string('responsab', 250)->nullable();
+            $table->string('responsability', 250)->nullable();
             $table->string('quali', 450)->nullable();
             $table->string('diferential', 450)->nullable();
             $table->string('requirement', 450)->nullable();

@@ -19,6 +19,7 @@ class CreateCandidatoUfTable extends Migration
             $table->text('sigla', 5);
             $table->string('nome', 50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -17,6 +17,7 @@ class CreateCandidatoCompetenciasNivelTable extends Migration
             $table->id();
             $table->string('name', 150);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

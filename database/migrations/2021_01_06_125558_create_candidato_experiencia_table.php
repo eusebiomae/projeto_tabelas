@@ -19,11 +19,12 @@ class CreateCandidatoExperienciaTable extends Migration
             $table->string('tipo_emprego', 50);
             $table->string('empresa', 150);
             $table->string('localidade', 150);
-            $table->boolean('cargo atual')->nullable(); //para confirmar se é ou não o cargo atual
-            $table->date('data inicio');
-            $table->date('data termino')->nullable();
+            $table->boolean('cargo_atual')->nullable(); //para confirmar se é ou não o cargo atual
+            $table->date('data_inicio');
+            $table->date('data_termino')->nullable();
             $table->text('desc', 450)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCandidatoExperienciaTipoEmpregoTable extends Migration
+class CreateCandidatoFormaçaoAcademicaFormaçao extends Migration
 {
     /**
      * Run the migrations.
@@ -17,6 +17,7 @@ class CreateCandidatoExperienciaTipoEmpregoTable extends Migration
         $table->id();
             $table->string('name', 50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

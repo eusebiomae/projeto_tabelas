@@ -18,6 +18,7 @@ class CreateEmpresaVagaPerguntaTable extends Migration
             $table->id('vaga', 150);
             $table->id('pergunta', 150);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -15,9 +15,10 @@ class CreateCandidatoIdiomasTable extends Migration
     {
         Schema::create('candidato_idiomas', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo idioma', 50);
+            $table->string('tipo_idioma', 50);
             $table->enum('nivel', ['basico', 'basico a intermediario', 'intermediario', 'avançado', 'fluente ou nativo']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

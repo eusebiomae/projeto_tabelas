@@ -16,8 +16,9 @@ class CreateCandidatoCompetenciasTable extends Migration
         Schema::create('candidato_competencias', function (Blueprint $table) {
             $table->id();
             $table->string('competencia', 150);
-            $table->string('nivel conhecimento', 150);
+            $table->string('nivel_conhecimento', 150);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

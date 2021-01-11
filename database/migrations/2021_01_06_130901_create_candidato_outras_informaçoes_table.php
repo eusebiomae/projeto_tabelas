@@ -18,6 +18,7 @@ class CreateCandidatoOutrasInformaçoesTable extends Migration
             $table->string('titulo', 150);
             $table->text('desc', 450);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

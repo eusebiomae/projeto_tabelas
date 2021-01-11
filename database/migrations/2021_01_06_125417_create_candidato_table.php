@@ -14,7 +14,7 @@ class CreateCandidatoTable extends Migration
     public function up()
     {
         Schema::create('candidato', function (Blueprint $table) {
-            $table->id();
+            $table->id('candidato');
             $table->string('name', 250)->nullable();
             $table->string('address', 450)->nullable();
             $table->string('address_num', 6)->nullable();
@@ -31,6 +31,7 @@ class CreateCandidatoTable extends Migration
             $table->text('cargo_desejado', 150);
             $table->text('pretençao_salarial', 50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

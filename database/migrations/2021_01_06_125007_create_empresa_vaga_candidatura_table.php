@@ -18,6 +18,7 @@ class CreateEmpresaVagaCandidaturaTable extends Migration
             $table->id('candidato');
             $table->id('vaga');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

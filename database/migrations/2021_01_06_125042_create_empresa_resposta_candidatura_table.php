@@ -19,6 +19,7 @@ class CreateEmpresaRespostaCandidaturaTable extends Migration
             $table->id('pergunta');
             $table->text('resposta');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

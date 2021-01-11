@@ -19,6 +19,7 @@ class CreateCandidatoCidadeTable extends Migration
             $table->id('uf');
             $table->id('pais');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

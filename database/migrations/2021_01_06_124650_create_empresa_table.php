@@ -14,7 +14,7 @@ class CreateEmpresaTable extends Migration
     public function up()
     {
         Schema::create('empresa', function (Blueprint $table) {
-            $table->id();
+            $table->id('empresa');
             $table->string('company_type', 150)->nullable();
             $table->string('fantasy_name', 400)->nullable();
             $table->binary('logo', 450)->nullable();
@@ -38,6 +38,7 @@ class CreateEmpresaTable extends Migration
             $table->string('address_uf', 150)->nullable();
             $table->string('ramo_atividade', 150);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
